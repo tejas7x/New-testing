@@ -185,7 +185,7 @@ async def setup_auto_reply(client, session_name):
         if event.is_private:
             try:
                 await event.reply(AUTO_REPLY_MESSAGE)
-                print(Fore.GREEN + f"[{session_name}] Replied to {event.sender_id}")
+                print(Fore.FUCHISA + f"[{session_name}] Replied to {event.sender_id}")
                 logging.info(f"[{session_name}] Replied to {event.sender_id}")
             except FloodWaitError as e:
                 print(Fore.RED + f"[{session_name}] Flood wait: {e.seconds} seconds")
