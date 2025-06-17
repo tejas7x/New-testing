@@ -188,7 +188,7 @@ async def run_session(session_num, client):
         # Start auto-reply
         await setup_auto_reply(client, session_name)
         
-        # Continuous forwarding with 1 minute intervals
+        # Continuous forwarding with 7 minute intervals
         while True:
             last_message = await get_last_saved_message(client)
             if last_message:
