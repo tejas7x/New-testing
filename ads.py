@@ -196,8 +196,8 @@ async def run_session(session_num, client):
             else:
                 print(Fore.RED + f"[{session_name}] No saved message found")
             
-            print(Fore.YELLOW + f"[{session_name}] Waiting 1 minutes before next round...")
-            await asyncio.sleep(60)  # 1 minutes
+            print(Fore.YELLOW + f"[{session_name}] Waiting 7 minutes before next round...")
+            await asyncio.sleep(420)  # 7 minutes
             
     except UserDeactivatedBanError:
         print(Fore.RED + f"[{session_name}] Account banned")
