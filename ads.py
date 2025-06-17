@@ -172,11 +172,11 @@ async def setup_auto_reply(client, session_name):
                 print(Fore.MAGENTA + f"[{session_name}] Replied to {event.sender_id}")
                 logging.info(f"[{session_name}] Replied to {event.sender_id}")
             except FloodWaitError as e:
-                print(Fore.RED + f"[{session_name}] Flood wait: {e.seconds} seconds")
+                print(Fore.MAGENTA + f"[{session_name}] Flood wait: {e.seconds} seconds")
                 await asyncio.sleep(e.seconds)
                 await event.reply(AUTO_REPLY_MESSAGE)
             except Exception as e:
-                print(Fore.RED + f"[{session_name}] Failed to reply: {str(e)}")
+                print(Fore.MAGENTA + f"[{session_name}] Failed to reply: {str(e)}")
                 logging.error(f"[{session_name}] Failed to reply: {str(e)}")
 
 async def run_session(session_num, client):
