@@ -25,7 +25,9 @@ logging.basicConfig(
 )
 
 # Auto-Reply Message
-AUTO_REPLY_MESSAGE = """
+AUTO_REPLY_MESSAGE = """Sir please 🙏 
+
+Message here 👉  @legit_4u
 """
 
 def display_banner():
