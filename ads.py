@@ -190,7 +190,7 @@ async def run_session(session_num, client):
         # Start auto-reply
         await setup_auto_reply(client, session_name)
         
-        # Continuous forwarding with 20 minute intervals
+        # Continuous forwarding with 18 minute intervals
         while True:
             last_message = await get_last_saved_message(client)
             if last_message:
@@ -198,8 +198,8 @@ async def run_session(session_num, client):
             else:
                 print(Fore.RED + f"[{session_name}] No saved message found")
             
-            print(Fore.YELLOW + f"[{session_name}] Waiting 20 minutes before next round...")
-            await asyncio.sleep(1200)  # 20 minutes
+            print(Fore.YELLOW + f"[{session_name}] Waiting 18 minutes before next round...")
+            await asyncio.sleep(1080)  # 18 minutes
             
     except UserDeactivatedBanError:
         print(Fore.RED + f"[{session_name}] Account banned")
