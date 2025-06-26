@@ -155,8 +155,8 @@ async def forward_messages_to_groups(client, last_message, session_name):
                 print(Fore.RED + f"[{session_name}] Failed to forward to {group.title}: {str(e)}")
                 logging.error(f"[{session_name}] Failed to forward to {group.title}: {str(e)}")
 
-            # Random delay between 20-30 seconds
-            delay = random.randint(20, 30)
+            # Random delay between 18-35 seconds
+            delay = random.randint(18, 35)
             print(Fore.CYAN + f"[{session_name}] Waiting {delay} seconds before next group...")
             await asyncio.sleep(delay)
 
